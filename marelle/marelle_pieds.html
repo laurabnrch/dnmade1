@@ -22,34 +22,34 @@
         </a-assets>
 
         <!-- INSEREZ VOTRE ENVIRONNEMENT, CI-DESSOUS ... -->
-        <a-sphere position="0 -0.2 0" 
-        radius="0.2" 
-        src="#texture7"></a-sphere>
-
-<a-sphere position="0.65 -0.35 0 " 
-        radius="0.35" 
-        src="#texture6"></a-sphere>
-
-
-<a-sphere position="1.6 -0.55 0.5" 
-        radius="0.55" 
-        src="#texture"></a-sphere>
-
-     
-
-<a-sphere position="2.55 -0.8 2 " 
-             radius="0.8" 
-             src="#texture2"></a-sphere>
+        <a-light type="directional" position="0 0 0" rotation="-90 45 0" target="#directionaltarget">
+            <a-entity id="directionaltarget" position="0 0 -1"></a-entity>
+          </a-light>
+     <a-sphere position="0 -0.35 0" 
+             radius="0.35" 
+             src="#texture6"></a-sphere>
 
   
+  
+     <a-sphere position="1.25 -0.35 0.25" 
+             radius="0.35" 
+             src="#texture3"></a-sphere>
 
-<a-cylinder position="3.5 -0.5 4" 
-               radius="1" 
-               height="1" 
-               color="white"
-               src="#texture3"></a-cylinder>
+             
+     <a-sphere position="2.5 -0.35 1" 
+             radius="0.35" 
+             src="#texture"></a-sphere>
+  
+       
+  
+     <a-sphere position="3.75 -0.35 2.25" 
+                    radius="0.35" 
+                    src="#texture2"></a-sphere>
 
-<a-sky src="#merrrr"></a-sky>
+
+
+
+     <a-sky src="#merrrr"></a-sky>
         <!-- ... JUSQUE CI-DESSUS -->
 
         <!-- PLAYER -->
@@ -68,6 +68,35 @@
                 <a-entity id="piedgauche" gltf-model="#rightfoot" rotation="-90 0 180">
             </a-entity>
 
+            <a-entity rotation="60 0 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 10000">
+                <a-sphere position="16 -5 -12" 
+                radius="2" 
+                src="#texture3"></a-sphere>
+        </a-entity>
+
+        <a-entity rotation="0 0 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 9000">            
+  <a-sphere position="-30 -10 10" 
+  radius="3" 
+  src="#texture6"></a-sphere>
+    </a-entity>
+
+    <a-entity rotation="0 80 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 7000">      
+        <a-sphere position="-20 -10 -20" 
+        radius="3" 
+        src="#texture"></a-sphere>
+          </a-entity>
+
+          <a-entity rotation="0 0 20" animation="property: rotation; to: 0 360 0; loop: true; dur: 12000">   
+            <a-sphere position="-50 -30 10" 
+            radius="3" 
+            src="#texture7"></a-sphere>
+              </a-entity>
+
+              <a-entity rotation="0 0 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 15000">
+                <a-sphere position="35 -10 10" 
+                radius="3" 
+                src="#texture3"></a-sphere>
+                  </a-entity>
         </a-entity>
 
     </a-scene>
