@@ -1,0 +1,24 @@
+<html>
+
+<head>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+</head>
+
+<body>
+    <a-scene background="color: black">
+
+        <a-assets>
+            <a-asset-item id="carlos-obj" src="./assets/diwa.obj"></a-asset-item>
+            <a-asset-item id="carlos-mtl" src="./assets/diwa.mtl"></a-asset-item>
+        </a-assets>
+
+        <a-entity obj-model="obj: #carlos-obj; mtl: #carlos-mtl" position="-5 0 0" scale="20 20 20"></a-entity>
+
+        <a-entity light="color: #00c7fd; intensity: 1.5" position="-12.644 64.354 222.907"></a-entity>
+        <a-entity light="type: directional; color: #5e2fec; intensity: 0.5" position="119.838 119.838 7.857"></a-entity>
+        <a-entity light="type: directional; color: #5e2fec; intensity: 0.5" position="9.727 52.877 7"></a-entity>
+
+    </a-scene>
+</body>
+
+</html>
