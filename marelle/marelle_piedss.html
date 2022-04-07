@@ -1,0 +1,102 @@
+<!-- source : model3D feet : https://free3d.com/3d-model/foot-v1--788401.html -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+</head>
+
+<body>
+    <a-scene background="color: #5280A7">
+
+        <a-assets>
+            <a-asset-item id="leftfoot" src="../piedgauche.glb"></a-asset-item>
+            <a-asset-item id="rightfoot" src="../pieddroite.glb"></a-asset-item>
+            <img id="merrrr" src="./assets/images/merrrr.png">
+            <img id="texture" src="./assets/images/riche.jpg">
+            <img id="texture2" src="./assets/images/bleu.jpg">
+            <img id="texture3" src="./assets/images/marron.jpg">
+            <img id="texture6" src="./assets/images/violet.jpg">
+            <img id="texture7" src="./assets/images/br.jpg">
+        </a-assets>
+
+        <!-- INSEREZ VOTRE ENVIRONNEMENT, CI-DESSOUS ... -->
+        <a-light type="directional" position="0 0 0" rotation="-90 45 0" target="#directionaltarget">
+            <a-entity id="directionaltarget" position="0 0 -1"></a-entity>
+          </a-light>
+     <a-sphere position="0 -0.35 0" 
+             radius="0.35" 
+             src="#texture6"></a-sphere>
+
+  
+  
+     <a-sphere position="1.25 -0.35 0.25" 
+             radius="0.35" 
+             src="#texture3"></a-sphere>
+
+             
+     <a-sphere position="2.5 -0.35 1" 
+             radius="0.35" 
+             src="#texture"></a-sphere>
+  
+       
+  
+     <a-sphere position="3.75 -0.35 2.25" 
+                    radius="0.35" 
+                    src="#texture2"></a-sphere>
+
+
+
+
+     <a-sky src="#merrrr"></a-sky>
+        <!-- ... JUSQUE CI-DESSUS -->
+
+        <!-- PLAYER -->
+        <a-entity id="cameraRig">
+            
+            <!-- TETE -->
+            <a-entity id="head" camera wasd-controls look-controls position="0 1.6 0"></a-entity>
+            
+            <!-- MAIN GAUCHE : utiliser oculus-touch-controls pour model3D -->
+            <a-entity id="gauche" oculus-touch-controls="hand: left; model:false">
+                <a-entity id="piedgauche" gltf-model="#leftfoot" rotation="-90 0 180"></a-entity>
+            </a-entity>
+            
+            <!-- MAIN DROITE : utiliser oculus-touch-controls pour model3D -->
+            <a-entity id="droite" oculus-touch-controls="hand: right; model:false">
+                <a-entity id="piedgauche" gltf-model="#rightfoot" rotation="-90 0 180">
+            </a-entity>
+
+        </a-entity>    
+        <a-entity rotation="0 0 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 9000">            
+            <a-sphere position="-30 -40 10" 
+            radius="3" 
+            src="#texture6"></a-sphere>
+              </a-entity>
+            
+              <a-entity rotation="0 80 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 7000">      
+                  <a-sphere position="-20 -10 -20" 
+                  radius="3" 
+                  src="#texture"></a-sphere>
+                    </a-entity>
+            
+                    <a-entity rotation="0 0 20" animation="property: rotation; to: 0 360 0; loop: true; dur: 12000">   
+                      <a-sphere position="-50 -30 10" 
+                      radius="3" 
+                      src="#texture7"></a-sphere>
+                        </a-entity>
+            
+                        <a-entity rotation="0 0 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 15000">
+                          <a-sphere position="10 -20 30" 
+                          radius="3" 
+                          src="#texture3"></a-sphere>
+                            </a-entity>
+                      </a-entity>
+                    </a-entity>
+            
+    </a-scene>
+
+</body>
+
+</html>
