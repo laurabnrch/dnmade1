@@ -1,0 +1,39 @@
+<html>
+
+<head>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+</head>
+
+<body>
+    <a-scene background="color: black">
+
+        <a-assets>
+            <a-asset-item id="carlos-obj" src="./assets/diwa.obj"></a-asset-item>
+            <a-asset-item id="carlos-mtl" src="./assets/diwa.mtl"></a-asset-item>
+        </a-assets>
+
+        <a-entity obj-model="obj: #carlos-obj; mtl: #carlos-mtl" position="0 0 -4" scale="20 20 20"></a-entity>
+        <a-entity light="color: #00c7fc; intensity: 1.5" position="-1 1 0"></a-entity>
+        <a-entity light="type: directional; color: #2c1376; intensity: 0.6" position="35.551 92.477 160.051"></a-entity>
+        <a-entity light="type: directional; color: #2c1376; intensity: 0.6" position="1 72.346 -179.660"></a-entity>
+        <a-entity light="type: point; intensity: 0.75; distance: 50; decay: 2"
+        position=" -1.828 36.886 41.150"></a-entity>
+        <a-entity light="type: point; intensity: 0.75; distance: 50; decay: 2"
+        position=" -32.103 24.648 32.831"></a-entity>
+        <a-entity light="type: point; intensity: 0.75; distance: 50; decay: 2"
+        position=" 40.393 8.435 33.564"></a-entity>
+        <a-entity light="type: point; intensity: 0.75; distance: 50; decay: 2"
+        position=" -33.683 32.749 -39.556"></a-entity>
+        <a-entity light="type: point; intensity: 0.75; distance: 50; decay: 2"
+        position=" -21.266 35.979 -36.158"></a-entity>
+        <a-entity light="type: point; intensity: 0.75; distance: 50; decay: 2"
+        position=" -2.253 35.980 -36.158"></a-entity>
+        <a-entity light="type: point; intensity: 0.75; distance: 50; decay: 2"
+        position=" 27.553 69.944 13.653"></a-entity>
+        <a-entity light="type: point; intensity: 0.75; distance: 50; decay: 2"
+        position=" 27.543 60.178 -22.281"></a-entity>
+        
+    </a-scene>
+</body>
+
+</html>
