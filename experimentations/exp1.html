@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+    <meta charset="utf-8">
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="./assets/"></script>
+</head>
+
+<body>
+    <a-scene background="color: #5280A7">
+
+        <a-assets>
+            <img id="merrrr" src="./assets/images/m3.jpg">
+
+        </a-assets>
+
+        <!-- INSEREZ VOTRE ENVIRONNEMENT, CI-DESSOUS ... -->
+        <a-light type="directional" position="-2.2 0.15 4.3" rotation="-90 45 0" target="#directionaltarget">
+          <a-entity id="directionaltarget" position="0 0 -1"></a-entity>
+        </a-light>
+  
+ 
+             
+
+
+
+        <a-sky src="#merrrr"></a-sky>
+
+        <!-- ... JUSQUE CI-DESSUS -->
+
+        <!-- PLAYER -->
+        <a-entity id="cameraRig">
+            
+            <!-- TETE -->
+            <a-entity id="tete" camera position="0 1.6 0" 
+                    look-controls wasd-controls>
+            </a-entity>
+  
+        </a-entity>
+
+    
+
+    
+
+
+             
+        </a-entity>
+     
+
+    </a-scene>
+
+
+</body>
+
+</html>
